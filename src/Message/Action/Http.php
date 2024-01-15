@@ -10,6 +10,7 @@ class Http extends Action
 
     private string $url;
     private string $method = 'POST';
+    /** @var array<string, string>  */
     private array $headers = [];
     private string $body = '';
 
@@ -17,11 +18,6 @@ class Http extends Action
     {
         parent::__construct($label, $clear);
         $this->type = self::TYPE;
-    }
-
-    public function getUrl(): string
-    {
-        return $this->url;
     }
 
     public function setUrl(string $url): self
@@ -48,6 +44,9 @@ class Http extends Action
         return $this->headers;
     }
 
+    /**
+     * @param array<string, string> $headers
+     */
     public function setHeaders(array $headers): self
     {
         $this->headers = $headers;
@@ -67,6 +66,9 @@ class Http extends Action
         return $this;
     }
 
+    /**
+     * @return array<string,array|bool|string>
+     */
     public function getContent(): array
     {
         return [

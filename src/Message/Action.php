@@ -21,25 +21,8 @@ abstract class Action
         return $this->type;
     }
 
-    public function getLabel(): string
-    {
-        return $this->label;
-    }
-
-    public function setLabel(string $label): void
-    {
-        $this->label = $label;
-    }
-
-    public function isClear(): bool
-    {
-        return $this->clear;
-    }
-
-    public function setClear(bool $clear): void
-    {
-        $this->clear = $clear;
-    }
-
+    /**
+     * @return array<string, array|bool|string>
+     */
     abstract public function getContent(): array;
 }

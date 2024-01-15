@@ -16,11 +16,6 @@ class View extends Action
         $this->type = self::TYPE;
     }
 
-    public function getUrl(): string
-    {
-        return $this->url;
-    }
-
     public function setUrl(string $url): self
     {
         $this->url = $url;
@@ -28,6 +23,9 @@ class View extends Action
         return $this;
     }
 
+    /**
+     * @return array<string,array|bool|string>
+     */
     public function getContent(): array
     {
         return [

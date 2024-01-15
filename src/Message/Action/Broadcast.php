@@ -7,7 +7,6 @@ use Kamilmusial\NtfyPhp\Message\Action;
 class Broadcast extends Action
 {
     const TYPE = 'broadcast';
-    private string $url;
     private string $intent = 'io.heckel.ntfy.USER_ACTION';
     private array $extras = [];
 
@@ -15,26 +14,6 @@ class Broadcast extends Action
     {
         parent::__construct($label, $clear);
         $this->type = self::TYPE;
-    }
-
-    public function getIntent(): string
-    {
-        return $this->intent;
-    }
-
-    public function setIntent(string $intent): self
-    {
-        $this->intent = $intent;
-
-        return $this;
-    }
-
-    /**
-     * @return Extras[]
-     */
-    public function getExtras(): array
-    {
-        return $this->extras;
     }
 
     /**

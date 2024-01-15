@@ -15,7 +15,7 @@ readonly class Message
         public ?string $title = null,
         public ?string $message = null,
         public ?array $tags = [],
-        public ?array $actions = [],
+        public ?array $actions = null,
         public ?string $click = null,
         public ?string $delay = null,
         public ?string $icon = null,
@@ -26,6 +26,9 @@ readonly class Message
     ) {
     }
 
+    /**
+     * @return array<string, mixed>
+     */
     public function getContent(): array
     {
         $content = [
@@ -38,7 +41,7 @@ readonly class Message
             'icon' => $this->icon,
         ];
 
-        if (count($this->actions)) {
+        if ($this->actions) {
             $content['actions'] = array_map(fn(Action $action) => $action->getContent(), $this->actions);
         }
 

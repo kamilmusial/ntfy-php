@@ -6,7 +6,8 @@
         "php": "^8.2",
         "ext-json": "*",
         "psr/http-client": "^1.0",
-        "guzzlehttp/guzzle": "^7.8"
+        "guzzlehttp/guzzle": "^7.8",
+        "jms/serializer": "^3.29"
     },
     "license": "MIT License",
     "autoload": {
@@ -25,7 +26,9 @@
         "phpunit/phpunit": "^10.5",
         "symfony/var-dumper": "^7.0",
         "squizlabs/php_codesniffer": "^3.8",
-        "slevomat/coding-standard": "^8.14"
+        "slevomat/coding-standard": "^8.14",
+        "phpstan/phpstan": "^1.10",
+        "spaze/phpstan-disallowed-calls": "^3.0"
     },
     "config": {
         "allow-plugins": {

@@ -23,15 +23,15 @@ readonly class GuzzleRequestFactory implements RequestFactoryInterface
             $headers['cache'] = $message->cache;
         }
 
-        $body = [
+        $body = json_encode([
             'content' => $message->getContent(),
-        ];
+        ]);
 
         return new Request(
             'POST',
             $this->config->uri,
             $headers,
-            json_encode($body)
+            (string) $body
         );
     }
 }
