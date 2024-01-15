@@ -1,0 +1,7 @@
+<ruleset name="NtfyPHP">
+    <file>src/</file>
+    <file>tests/</file>
+    <config name="installed_paths" value="../../slevomat/coding-standard"/>
+    <rule ref="SlevomatCodingStandard.Arrays.TrailingArrayComma"/>
+
+</ruleset>
