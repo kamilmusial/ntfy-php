@@ -18,7 +18,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Kamilmusial\\NtfyPhp\\": "src/",
+            "Kamilmusial\\NtfyPhp\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Kamilmusial\\NtfyPhpTest\\": "tests/"
         }
     },
