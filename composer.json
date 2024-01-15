@@ -9,7 +9,7 @@
         "guzzlehttp/guzzle": "^7.8",
         "jms/serializer": "^3.29"
     },
-    "license": "MIT License",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Kamilmusial\\NtfyPhp\\": "src/",
